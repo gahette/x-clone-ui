@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: black;
+  --color-foreground: #ededed;
+}
+@media (prefers-color-scheme: dark) {
+  @theme inline {
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+  }
+}
+body {
+  @apply bg-background text-foreground font-sans;
+}

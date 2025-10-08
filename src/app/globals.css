@@ -1,15 +1,38 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
+/* === Définition du thème Tailwind v4 inline === */
 @theme inline {
+  /* Couleurs personnalisées */
+  --color-textGray: #71767b;
+  --color-textGrayLight: #e7e9ea;
+  --color-borderGray: #2f3336;
+  --color-inputGray: #202327;
+  --color-iconBlue: #1d9bf0;
+  --color-iconGreen: #00ba7c;
+  --color-iconPink: #f91880;
+
+  /* Couleurs globales (déjà présentes) */
   --color-background: black;
   --color-foreground: #ededed;
+
+  /* Breakpoints personnalisés */
+  --breakpoint-xsm: 500px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 690px;
+  --breakpoint-lg: 988px;
+  --breakpoint-xl: 1078px;
+  --breakpoint-xxl: 1265px;
 }
+
+/* Mode sombre */
 @media (prefers-color-scheme: dark) {
   @theme inline {
     --color-background: #0a0a0a;
     --color-foreground: #ededed;
   }
 }
+
+/* Styles globaux */
 body {
   @apply bg-background text-foreground font-sans;
 }
